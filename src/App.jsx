@@ -91,15 +91,18 @@ function resetGame() {
 }
 
 export default () => {
-  const { register, getValues } = useForm();
+  const { register,getValues} = useForm();
+  
   return (
     <div className="App">
       <header className="App-header">
-        <p>Random-number-guess-game</p>
+        <h3>Random-number-guess-game</h3>
 
-        <form>
-          <input type = "number" {...register("inputGuess", {min:2, max:99})} id="guessField" />
+        <span>Please do not refresh or press Enter key</span>
 
+        <form >
+          <input type = "number" {...register("inputGuess", { min:1, max:100})} id="guessField" />
+ 
           <button
             type="button"
             onClick={() => {
@@ -110,9 +113,8 @@ export default () => {
           >
             Submit
           </button>
-        </form>
 
-        <span>Please do not refresh or press Enter key</span>
+        </form>
 
         <div id="resultParaTags" className="divP">
           <p id="showGuesses"></p>
