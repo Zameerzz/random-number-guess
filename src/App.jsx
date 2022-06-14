@@ -1,5 +1,5 @@
+/* eslint-disable import/no-anonymous-default-export */
 import "./App.css";
-import React from "react";
 import { useForm } from "react-hook-form";
 
 var randomNum = Math.floor(Math.random() * 100) + 1;
@@ -7,26 +7,23 @@ console.log(`random num ${randomNum}`);
 
 let guessCount = 1;
 
-let myItems = [];
+let guesses = [];
+
 function checkGuess(value) {
-  console.log(`show the random number ${randomNum}`);
- 
+  guesses.push(value);
+  document.getElementById("showGuesses").innerHTML = `prevoius guess: ${guesses}`;
   if (randomNum == value) {
-    alert("right");
+    //alert("right");
   } else {
-     alert("wrong");
+    //alert("wrong");
   }
-  console.log(`show the random nu ${randomNum}`);
-  guessCount++;
-  value = "";
 }
 
 export default () => {
-  const { register, handleSubmit, getValues } = useForm();
-
+  const { register, getValues } = useForm();
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header" >
         <p>Random-number-guess-game</p>
         <form>
           <input {...register("test")} />
@@ -40,12 +37,13 @@ export default () => {
             Submit
           </button>
         </form>
+
         <div className="resultParas">
-          <p className="showGuesses">
-          </p>
+          <p id="showGuesses"></p>
           <p className="showLastResult"></p>
           <p className="showLowOrHi"></p>
         </div>
+
       </header>
     </div>
   );
