@@ -101,7 +101,7 @@ export default () => {
         <span>Please do not refresh or press Enter key</span>
 
         <form >
-          <input type = "number" {...register("inputGuess", { min:1, max:100})} id="guessField" />
+          <input type = "number" {...register("inputGuess", { required: true,min:1, max:100})} id="guessField" />
  
           <button
             type="button"
