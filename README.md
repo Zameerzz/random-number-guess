@@ -1,4 +1,4 @@
 Random-number-guess-game
 
 
-![alt text](http://github.com/Zameerzz/random-number-guess/tree/master/congo.png)
+![alt text](https://github.com/Zameerzz/random-number-guess/master/image.jpg?raw=true)
