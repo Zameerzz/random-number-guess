@@ -13,5 +13,5 @@ If user guessed wrong number page will display wrong message with low or high
 If user guessed correct number page will display congo message
 ![alt text](https://github.com/Zameerzz/random-number-guess/blob/master/public/congo.png?raw=true)
 
-If user used all turns and could not succeed guessing correct number using all turns, Page will displays the sorry message and giving chance to play again by showing restart game button. 
+If user used all turns and could not succeed guessing correct number using all turns, Page will displays the sorry message and giving chance to play again by showing start new game button. 
 ![alt text](https://github.com/Zameerzz/random-number-guess/blob/master/public/sorry.png?raw=true)
